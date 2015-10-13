@@ -9,6 +9,24 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main" tools:context=".MainActivity">
 
-    <TextView android:text="Hello World!" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView android:text="Enter Username" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:id="@+id/usernameText" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_below="@+id/usernameText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        />
+
+    <Button android:id="@+id/register"
+        android:text="register"
+        android:layout_below="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:onClick=""
+        />
+
 </RelativeLayout>
