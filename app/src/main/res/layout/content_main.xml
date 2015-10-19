@@ -19,10 +19,17 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         />
+    <Button android:id="@+id/login"
+        android:text="Login"
+        android:layout_below="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        />
 
     <Button android:id="@+id/register"
         android:text="register"
-        android:layout_below="@+id/username"
+        android:layout_below="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="false"
