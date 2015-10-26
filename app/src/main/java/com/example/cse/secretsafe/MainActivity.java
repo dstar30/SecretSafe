@@ -13,8 +13,8 @@ import android.content.Intent;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String PREFS_NAME = "PREFERENCE_FILE";
 
+    public static final String PREFS_NAME = "PREFERENCE_FILE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
