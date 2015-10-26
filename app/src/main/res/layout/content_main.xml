@@ -28,11 +28,12 @@
 
     <EditText
         android:id="@+id/email"
+        android:labelFor="@+id/emailText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:layout_below="@+id/emailText"
-        android:layout_alignLeft="@+id/emailText"/>
+        android:layout_alignStart="@+id/emailText"/>
 
     <EditText
         android:id="@+id/password"
@@ -42,7 +43,7 @@
         android:layout_below="@+id/passwordText"
         android:layout_alignParentEnd="true" />
 
-    <Button android:id="@+id/login"
+    <Button android:id="@+id/loginButton"
         android:text="@string/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,7 +51,7 @@
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true" />
 
-    <Button android:id="@+id/register"
+    <Button android:id="@+id/registerButton"
         android:text="@string/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,6 +63,7 @@
 
     <ImageButton
         android:id="@+id/speakerButton"
+        android:contentDescription="voice button for log in"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
@@ -75,9 +77,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/screenMessage"
+        android:text="@string/loginOptionMsg"
         android:id="@+id/smallText"
-        android:layout_below="@+id/login"
+        android:layout_below="@+id/loginButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8sp"
         android:textColor="@color/text"/>
@@ -88,8 +90,8 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/registerMessage"
         android:id="@+id/textView"
-        android:layout_above="@+id/register"
-        android:layout_alignEnd="@+id/register"
+        android:layout_above="@+id/registerButton"
+        android:layout_alignEnd="@+id/registerButton"
         android:textColor="@color/text"/>
 
 </RelativeLayout>
