@@ -12,11 +12,6 @@ import android.view.MenuItem;
 import android.content.Intent;
 import android.widget.Button;
 
-
-
-
-
-
 public class MainActivity extends AppCompatActivity {
     public static final String PREFS_NAME = "PREFERENCE_FILE";
 
@@ -30,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         boolean silent = settings.getBoolean("silentMode", false);
-        setSilent(silent);
+        //setSilent(silent);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
 
