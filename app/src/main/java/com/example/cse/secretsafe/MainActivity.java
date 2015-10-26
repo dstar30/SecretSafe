@@ -1,5 +1,6 @@
 package com.example.cse.secretsafe;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,13 +12,9 @@ import android.view.MenuItem;
 import android.content.Intent;
 import android.widget.Button;
 
-
-
-
-
-
 public class MainActivity extends AppCompatActivity {
-//onCreate
+
+    public static final String PREFS_NAME = "PREFERENCE_FILE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
 
         //listener for the register button
         Button registerButton = (Button)findViewById(R.id.register);
+
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        boolean silent = settings.getBoolean("silentMode", false);
+        //setSilent(silent);
+
         registerButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
