@@ -94,4 +94,18 @@
         android:layout_alignEnd="@+id/registerButton"
         android:textColor="@color/text"/>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/smallText"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background.jpg"
+            android:scaleType="centerCrop"
+            />
+    </FrameLayout>
+
 </RelativeLayout>
