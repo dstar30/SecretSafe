@@ -7,33 +7,94 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_main" tools:context=".MainActivity">
+    tools:showIn="@layout/activity_main"
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
 
-    <TextView android:text="Enter Username" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:id="@+id/usernameText" />
+    <TextView android:text="@string/emailText"
+        android:id="@+id/emailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/text"/>
+
+    <TextView android:text="@string/password"
+        android:id="@+id/passwordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:layout_below="@+id/email"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/text"/>
 
     <EditText
-        android:id="@+id/username"
-        android:layout_below="@+id/usernameText"
+        android:id="@+id/email"
+        android:labelFor="@+id/emailText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        />
-    <Button android:id="@+id/login"
-        android:text="Login"
-        android:layout_below="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="false"
-        />
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/emailText"
+        android:layout_alignStart="@+id/emailText"/>
 
-    <Button android:id="@+id/register"
-        android:text="register"
-        android:layout_below="@+id/login"
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_below="@+id/passwordText"
+        android:layout_alignParentEnd="true" />
+
+    <Button android:id="@+id/loginButton"
+        android:text="@string/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="false"
+        android:textSize="17sp"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true" />
+
+    <Button android:id="@+id/registerButton"
+        android:text="@string/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick=""
-        />
+        android:textSize="15sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/speakerButton"
+        android:layout_marginBottom="45dp" />
+
+    <ImageButton
+        android:id="@+id/speakerButton"
+        android:contentDescription="voice button for log in"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:src="@android:drawable/ic_btn_speak_now"
+        android:layout_below="@+id/smallText"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/loginOptionMsg"
+        android:id="@+id/smallText"
+        android:layout_marginTop="22dp"
+        android:textColor="@color/blackText"
+        android:layout_below="@+id/loginButton"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/registerMessage"
+        android:id="@+id/textView"
+        android:layout_above="@+id/registerButton"
+        android:layout_alignEnd="@+id/registerButton"
+        android:textColor="@color/text"/>
 
 </RelativeLayout>
