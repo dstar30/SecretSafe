@@ -3,6 +3,7 @@ package com.example.cse.secretsafe;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 
@@ -19,8 +20,19 @@ public class registerActivity extends Activity{
         boolean silent = settings.getBoolean("silentMode", false);
         //setSilent(silent);
         setContentView(R.layout.register);
+
+        registerButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                saveLoginInfo();
+            }
+        });
     }
 
+    private void saveLoginInfo(){
+
+    }
 
 
 }
