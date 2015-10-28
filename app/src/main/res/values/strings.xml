@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SecretSafe</string>
+    <string name="app_name">Secret Safe</string>
     <string name="action_settings">Settings</string>
     <string name="emailText">Email</string>
     <string name="password">Password</string>
