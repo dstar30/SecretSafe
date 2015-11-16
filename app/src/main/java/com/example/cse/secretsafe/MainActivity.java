@@ -12,20 +12,22 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
 
-    public static final String PREFS_NAME = "PREFERENCE_FILE";
+    // public static final String PREFS_NAME = "PREFERENCE_FILE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
+
+//        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+//        boolean silent = settings.getBoolean("silentMode", false);
+//        //setSilent(silent);
+
         //listener for the register button
         Button registerButton = (Button)findViewById(R.id.registerButton);
-        Button loginButton = (Button)findViewById(R.id.loginButton);
-
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        boolean silent = settings.getBoolean("silentMode", false);
-        //setSilent(silent);
-
         registerButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //listener for the login button
+        Button loginButton = (Button)findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
