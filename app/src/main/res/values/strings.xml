@@ -7,4 +7,7 @@
     <string name="register">Register</string>
     <string name="loginOptionMsg">Or say the secret word</string>
     <string name="registerMessage">Don\'t have an account yet? Get one in seconds!</string>
+    <string name="RegisterHere">Register Here</string>
+    <string name ="locker">Your Locker</string>
+
 </resources>

@@ -3,9 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/registerLayout"
-    android:background="@drawable/background">>
-    <TextView android:text="locker home!" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    android:background="@drawable/background">
 
     <ListView
         android:id="@+id/bucket"
@@ -15,6 +13,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/btnAddSecret"
+
 
         >
         ></ListView>
@@ -30,7 +29,9 @@
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/btnAddSecret"
         android:layout_toStartOf="@+id/btnAddSecret"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:textColorHint="@color/text"
+        />
 
     <Button
         android:layout_width="wrap_content"
