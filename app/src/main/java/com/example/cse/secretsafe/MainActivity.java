@@ -3,6 +3,7 @@ package com.example.cse.secretsafe;
 import android.content.ActivityNotFoundException;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -22,9 +23,13 @@ public class MainActivity extends AppCompatActivity {
     protected static final int RESULT_SPEECH = 1;
     private ImageButton speakerButton1;
     private TextView speechToText1;
-    String ps = "test";
-    String currentPs;
-    EditText email;
+    //currently grabs the most recent input from registration. Database needed
+    //to store multiple credentials.
+   public static String ps;
+    //String ps = "test";
+    public static EditText email;
+    String currentPs = "0";
+    EditText currentEmail;
 
 
     // public static final String PREFS_NAME = "PREFERENCE_FILE";
@@ -36,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         //speechToText will hold the phrase said by the user
         speechToText1 = (TextView) findViewById(R.id.speechToText1);
         speakerButton1 = (ImageButton) findViewById(R.id.speakerButton1);
-        email = (EditText) findViewById(R.id.email);
+        currentEmail = (EditText) findViewById(R.id.email);
         //sets the listener for the speaker
         speakerButton1.setOnClickListener(new View.OnClickListener() {
 
@@ -127,8 +132,11 @@ public class MainActivity extends AppCompatActivity {
 
                      currentPs = text.get(0);
 
+                    //compare emails and passwords for authentication
+                    String stringCurMail = currentEmail.getText().toString();
+                    String stringMail = email.getText().toString();
 
-                    if(email.getText().toString().equals("email") && currentPs.equals(ps)) {
+                    if(stringCurMail.equals(stringMail) && currentPs.equals(ps)) {
                         Intent intent1 = new Intent(MainActivity.this, lockerHomeActivity.class);
                         startActivity(intent1);
                     }else{
